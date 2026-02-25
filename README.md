@@ -135,5 +135,12 @@ Variable de entorno
 NEXT_PUBLIC_GRAPHQL_API_URL=https://rickandmortyapi.com/graphql
 ```
 
+Usuario de acceso
+
+```
+Usuario: admin@test.com
+Contraseña: 123456
+```
+
 ---
 
