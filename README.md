@@ -129,5 +129,11 @@ Aplicación disponible en:
 http://localhost:3000
 ```
 
+Variable de entorno
+
+```
+NEXT_PUBLIC_GRAPHQL_API_URL=https://rickandmortyapi.com/graphql
+```
+
 ---
 
