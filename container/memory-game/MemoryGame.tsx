@@ -21,6 +21,7 @@ export default function MemoryGame() {
   const router = useRouter()
 
   const [phase, setPhase] = useState<GamePhase>('preview')
+  const [pairs, setPairs] = useState<number>(8)
   const [gameId, setGameId] = useState<number>(0)
 
   const { data, isLoading, error, refetch } = useCharacters(1)
@@ -67,6 +68,8 @@ export default function MemoryGame() {
               key={gameId}
               characters={characters}
               phase={phase}
+              pairs={pairs}
+              setPairs={setPairs}
               onFinish={() => setPhase('finished')}
             />
           )}
@@ -79,8 +82,8 @@ export default function MemoryGame() {
                 text='Jugar'
                 variant='secondary'
                 onClick={() => {
-                  setGameId(prev => prev + 1)
                   setPhase('playing')
+                  setGameId(prev => prev + 1)
                 }}
               />
             )}
@@ -91,13 +94,13 @@ export default function MemoryGame() {
                   text='Reiniciar'
                   variant='secondary'
                   onClick={() => {
-                    setGameId(prev => prev + 1)
                     setPhase('preview')
+                    setGameId(prev => prev + 1)
                   }}
                 />
                 <Button
                   text='Volver al inicio'
-                  variant='secondary'
+                  variant='primary'
                   onClick={handleLogout}
                 />
               </div>
