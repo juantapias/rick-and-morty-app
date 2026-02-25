@@ -1,0 +1,21 @@
+.inputContainer {
+  position: relative;
+}
+
+.input {
+  border: .0625rem solid var(--border);
+  border-radius: .5rem;
+  color: var(--text);
+  text-indent: 1rem;
+  padding: .75rem 0;
+  position: relative;
+  width: 100%;
+}
+
+.passwordToggle {
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
