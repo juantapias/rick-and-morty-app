@@ -1,8 +1,14 @@
+const apiUrl = process.env.NEXT_PUBLIC_GRAPHQL_API_URL
+
 export const graphqlFetcher = async <T>(
   query: string,
   variables?: Record<string, unknown>
 ): Promise<T> => {
-  const response = await fetch('https://rickandmortyapi.com/graphql', {
+  if (!apiUrl) {
+    throw new Error('NEXT_PUBLIC_GRAPHQL_API_URL is not defined')
+  }
+
+  const response = await fetch(apiUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

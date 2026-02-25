@@ -74,7 +74,7 @@ export default function MemoryGame() {
 
         {!isLoading && (
           <div className='flex justify-center'>
-            {phase === 'preview' && (
+            {!error && phase === 'preview' && (
               <Button
                 text='Jugar'
                 variant='secondary'
