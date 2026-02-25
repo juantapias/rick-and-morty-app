@@ -1,6 +1,13 @@
 'use client'
 
-import { useState, useRef, useMemo, useEffect } from 'react'
+import {
+  useState,
+  useRef,
+  useMemo,
+  useEffect,
+  Dispatch,
+  SetStateAction,
+} from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
@@ -14,13 +21,16 @@ import { PartyPopper } from 'lucide-react'
 export default function Memory({
   characters,
   phase,
+  pairs,
+  setPairs,
   onFinish,
 }: {
   characters: Character[]
   phase: GamePhase
+  pairs: number
+  setPairs: Dispatch<SetStateAction<number>>
   onFinish: () => void
 }) {
-  const [pairs, setPairs] = useState<number>(8)
   const [flipped, setFlipped] = useState<string[]>([])
   const [matched, setMatched] = useState<string[]>([])
   const [turns, setTurns] = useState<number>(0)
@@ -164,7 +174,7 @@ export default function Memory({
           <select
             value={pairs}
             onChange={e => handleDifficultyChange(Number(e.target.value))}
-            disabled={flipped.length > 0}>
+            disabled={phase === 'playing'}>
             <option value={8}>Facil</option>
             <option value={12}>Medio</option>
             <option value={16}>Dificil</option>
