@@ -1,0 +1,17 @@
+.card {
+  background: var(--accent);
+  border-radius: 1rem;
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 32rem;
+  width: 100%;
+}
+
+.cardHeader {}
+
+.cardBody {}
+
+.cardFooter {
+  color: var(--text)
+}

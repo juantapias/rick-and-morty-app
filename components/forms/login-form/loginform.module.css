@@ -1,0 +1,12 @@
+.loginForm {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+}
+
+.loginForgotUser {
+  color: var(--text);
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+}

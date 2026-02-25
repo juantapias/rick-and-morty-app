@@ -1,0 +1,15 @@
+.logoWrap {
+  height: 7rem;
+  position: relative;
+  width: 100%;
+}
+
+.logoWrap.lg {
+  height: 10rem;
+}
+
+.logo {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}

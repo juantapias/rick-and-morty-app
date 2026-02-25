@@ -1,0 +1,35 @@
+.memoryGame {
+  display: grid;
+  gap: 2rem
+}
+
+.memoryGameTitle {
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  margin: auto;
+  padding: .5rem;
+  width: fit-content;
+}
+
+.memoryGameContainer {
+  background: var(--accent);
+  border-radius: 1rem;
+  display: grid;
+  gap: 2rem;
+  margin: auto;
+  max-width: 64rem;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+.memoryGameWrap {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-around;
+}
