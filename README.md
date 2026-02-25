@@ -107,8 +107,8 @@ El objetivo fue mejorar la experiencia sin sobrecargar la lógica del componente
 ## 1️⃣ Clonar repositorio
 
 ```bash
-git clone https://github.com/tuusuario/rick-morty-memory.git
-cd rick-morty-memory
+git clone git@github.com:juantapias/rick-and-morty-app.git
+cd rick-morty-memory-app
 ```
 
 ## 2️⃣ Instalar dependencias
